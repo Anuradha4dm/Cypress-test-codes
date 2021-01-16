@@ -24,10 +24,9 @@ describe("Home page item test",()=>{
         var array=[];
         var sum=0;
         cy.get('div .thumbnail').find('.oneprice').each(($element,index,list)=>{
-            
           sum+=(parseFloat($element.text().split('$')[1]));
-            
-          cy.log(sum);
+        }).then(()=>{
+            cy.log(sum);
         })
 
     })
