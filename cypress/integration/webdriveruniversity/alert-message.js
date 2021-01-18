@@ -20,27 +20,24 @@ describe('Alert message handling',()=>{
         cy.visit('https://webdriveruniversity.com');
         cy.get('#popup-alerts').invoke('removeAttr','target').click();
         cy.get('#button4').click();
-
         cy.on('window:alert',(str)=>{
            return true;
         });
-
         cy.get('#confirm-alert-text').contains('You pressed OK!')
 
     })
 
     it('Java sctipr alert message with message 4 cansel press',()=>{
-
         cy.visit('https://webdriveruniversity.com');
         cy.get('#popup-alerts').invoke('removeAttr','target').click();
         cy.get('#button4').click();
-
         cy.on('window:confirm',(str)=>{
            return false;
         });
-
         cy.get('#confirm-alert-text').contains('You pressed Cancel!')
 
-    })
+    });
+
+    
 
 })
