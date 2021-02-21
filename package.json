@@ -9,6 +9,7 @@
   "author": "Damith_Anuradha",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^6.2.1"
+    "cypress": "^6.2.1",
+    "cypress-file-upload": "^5.0.2"
   }
 }

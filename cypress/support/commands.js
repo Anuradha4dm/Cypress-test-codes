@@ -19,7 +19,15 @@
 //
 // -- This is a dual command --
 // Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
+    Cypress.Commands.add('selectProduct',(element,prodName)=>{
+
+        if(element.text()===prodName){
+            cy.wrap(element).click();
+            cy.get('.productname span').invoke('text').should('include',prodName);
+        }
+    })
+
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+import 'cypress-file-upload';
+
